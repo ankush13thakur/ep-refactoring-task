@@ -11,10 +11,10 @@ public class FulfillmentPresenter {
     private final Map<String, PaymentDetailsFormatter> formatters = new HashMap<>();
 
     public FulfillmentPresenter() {
-        formatters.put("GOOGLE_CHECKOUT", new GoogleCheckoutFormatter());
-        formatters.put("GIFT_CERTIFICATE", new GiftCertificateFormatter());
-        formatters.put("PAYPAL_EXPRESS", new PaypalExpressFormatter());
-        formatters.put("RETURN_AND_EXCHANGE", new ReturnAndExchangeFormatter());
+        registerFormatter("GOOGLE_CHECKOUT", new GoogleCheckoutFormatter());
+        registerFormatter("GIFT_CERTIFICATE", new GiftCertificateFormatter());
+        registerFormatter("PAYPAL_EXPRESS", new PaypalExpressFormatter());
+        registerFormatter("RETURN_AND_EXCHANGE", new ReturnAndExchangeFormatter());
     }
 
     /**
